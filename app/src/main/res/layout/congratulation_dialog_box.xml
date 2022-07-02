@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:background="@drawable/rounded_white"
+    android:padding="30dp">
+
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/congratulations_image" />
+
+    <TextView
+        android:id="@+id/congrats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pic"
+        android:layout_marginVertical="5dp"
+        android:fontFamily="@font/lexend_deca"
+        android:gravity="center"
+        android:text="Congratulations!"
+        android:textColor="@color/lightblue"
+        android:textSize="25sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/congrats"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/lexend_deca"
+        android:gravity="center"
+        android:text="Your account is ready to use"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/GoToHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/gradient_blue"
+        android:text="Go To Homepage"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+</RelativeLayout>

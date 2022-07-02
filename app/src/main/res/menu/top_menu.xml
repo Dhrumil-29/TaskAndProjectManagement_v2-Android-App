@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/addCover"
+        android:icon="@drawable/image_icon"
+        android:title="Add Cover"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/addLogo"
+        android:icon="@drawable/pop_down_icon"
+        android:title="Add Logo"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/setColor"
+        android:icon="@drawable/eye_icon"
+        android:title="Set Color"
+        android:visible="true" />
+    <item
+        android:id="@+id/editProject"
+        android:icon="@drawable/edit_icon"
+        android:title="Edit Project"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/deleteProject"
+        android:icon="@drawable/delete_icon"
+        android:iconTint="@color/red"
+        android:title="Delete Project"
+        tools:ignore="HardcodedText,UnusedAttribute" />
+
+</menu>

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProjectDetailFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@color/light_blue"
+            android:foregroundGravity="bottom"
+            android:src="@drawable/add_icon"
+            app:layout_anchorGravity="bottom"
+            app:maxImageSize="30dp"
+            tools:ignore="ContentDescription,RtlHardcoded,UnusedAttribute" />
+
+        <ImageView
+            android:id="@+id/project_background_pic"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/light_black"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/backFromProjectDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginVertical="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                app:drawableStartCompat="@drawable/back_icon"
+                app:drawableTint="@color/white"
+                app:tint="@color/white"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/TopMenuBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="0dp"
+                android:paddingVertical="0dp"
+                app:drawableStartCompat="@drawable/menu_icon"
+                app:drawableTint="@color/white"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:layout_marginRight="8dp"
+                android:layout_toStartOf="@+id/TopMenuBar"
+                android:layout_toLeftOf="@+id/TopMenuBar"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="5dp"
+                android:src="@drawable/search_icon"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/project_background_pic"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded,RtlSymmetry">
+
+            <TextView
+                android:id="@+id/projectTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:gravity="left"
+                android:paddingHorizontal="10dp"
+                android:text="Tiki Mobile App Project"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,TooDeepLayout" />
+
+            <TextView
+                android:id="@+id/projectDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_deca"
+                android:gravity="left"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:text="UI Kit Design Project - Dec 20,2024"
+                android:textColor="@color/light_black"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/gradient_blue"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/projectProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_deca"
+                    android:text="80"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_deca"
+                    android:text=" / 100"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/processBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp"
+                android:progress="80"
+                android:progressTint="@color/lightdim_blue"
+                tools:ignore="UnusedAttribute" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="ScrollViewSize">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/rounded_light_white_background"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_marginVertical="10dp"
+                                    android:orientation="horizontal"
+                                    android:paddingHorizontal="15dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="To-Do"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        tools:ignore="HardcodedText,TooDeepLayout" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:background="@drawable/rounded_blue_border"
+                                        android:paddingHorizontal="15dp"
+                                        android:paddingVertical="5dp"
+                                        android:text="6"
+                                        android:textColor="@color/black"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold"
+                                        tools:ignore="HardcodedText" />
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/buildWireframe"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="15dp"
+                                    android:layout_marginVertical="15dp"
+                                    app:cardCornerRadius="20dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingHorizontal="15dp"
+                                        android:paddingVertical="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingTop="15dp"
+                                            android:text="Build Wireframe"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingVertical="5dp"
+                                            android:text="Due date: Dec 14, 2014"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="15sp"
+                                            tools:ignore="HardcodedText" />
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginVertical="10dp"
+                                            app:cardCornerRadius="15dp">
+
+                                            <ImageView
+                                                android:id="@+id/background"
+                                                android:layout_width="225dp"
+                                                android:layout_height="150dp"
+                                                android:scaleType="fitXY"
+                                                tools:ignore="ContentDescription" />
+                                        </androidx.cardview.widget.CardView>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/attachment5"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:drawableLeft="@drawable/attachment_icon"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:text="8"
+                                                android:textSize="15sp"
+                                                tools:ignore="HardcodedText" />
+
+                                            <TextView
+                                                android:id="@+id/chat5"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/attachment5"
+                                                android:layout_toLeftOf="@+id/attachment5"
+                                                android:drawableLeft="@drawable/chat_icon"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:paddingHorizontal="10dp"
+                                                android:text="6"
+                                                android:textSize="15sp"
+                                                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                                            <TextView
+                                                android:id="@+id/flag5"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/chat5"
+                                                android:layout_toLeftOf="@+id/chat5"
+                                                android:drawableLeft="@drawable/flag_icon"
+                                                android:drawablePadding="10dp"
+                                                android:drawableTint="@color/blue"
+                                                android:gravity="center_vertical"
+                                                tools:ignore="HardcodedText,UnusedAttribute,UseCompatTextViewDrawableXml" />
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="15dp"
+                                    android:layout_marginVertical="15dp"
+                                    app:cardCornerRadius="20dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingHorizontal="15dp"
+                                        android:paddingVertical="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingTop="15dp"
+                                            android:text="Brainstorming"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingVertical="5dp"
+                                            android:text="Due date: Dec 14, 2014"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="15sp"
+                                            tools:ignore="HardcodedText" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:paddingVertical="10dp">
+
+                                            <TextView
+                                                android:id="@+id/attachment6"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:text="8"
+                                                android:textSize="15sp"
+                                                app:drawableLeftCompat="@drawable/attachment_icon"
+                                                tools:ignore="HardcodedText" />
+
+                                            <TextView
+                                                android:id="@+id/chat6"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/attachment6"
+                                                android:layout_toLeftOf="@+id/attachment6"
+                                                android:drawableLeft="@drawable/chat_icon"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:paddingHorizontal="10dp"
+                                                android:text="6"
+                                                android:textSize="15sp"
+                                                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                                            <TextView
+                                                android:id="@+id/flag6"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/chat6"
+                                                android:layout_toLeftOf="@+id/chat6"
+                                                android:drawableLeft="@drawable/flag_icon"
+                                                android:drawablePadding="10dp"
+                                                android:drawableTint="@color/blue"
+                                                android:gravity="center_vertical"
+                                                tools:ignore="HardcodedText,UnusedAttribute,UseCompatTextViewDrawableXml" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="15dp"
+                                    android:layout_marginVertical="15dp"
+                                    app:cardCornerRadius="20dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingHorizontal="15dp"
+                                        android:paddingVertical="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingTop="15dp"
+                                            android:text="Design Explore"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingVertical="5dp"
+                                            android:text="Due date: Dec 14, 2014"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="15sp"
+                                            tools:ignore="HardcodedText" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:paddingVertical="10dp">
+
+                                            <TextView
+                                                android:id="@+id/attachment7"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:text="8"
+                                                android:textSize="15sp"
+                                                app:drawableLeftCompat="@drawable/attachment_icon"
+                                                tools:ignore="HardcodedText" />
+
+                                            <TextView
+                                                android:id="@+id/chat7"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/attachment7"
+                                                android:layout_toLeftOf="@+id/attachment7"
+                                                android:drawableLeft="@drawable/chat_icon"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:paddingHorizontal="10dp"
+                                                android:text="6"
+                                                android:textSize="15sp"
+                                                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                                            <TextView
+                                                android:id="@+id/flag7"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/chat7"
+                                                android:layout_toLeftOf="@+id/chat7"
+                                                android:drawableLeft="@drawable/flag_icon"
+                                                android:drawablePadding="10dp"
+                                                android:drawableTint="@color/blue"
+                                                android:gravity="center_vertical"
+                                                tools:ignore="HardcodedText,UnusedAttribute,UseCompatTextViewDrawableXml" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/rounded_light_white_background"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none"
+                            tools:ignore="UselessParent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_marginVertical="10dp"
+                                    android:orientation="horizontal"
+                                    android:paddingHorizontal="15dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingRight="60dp"
+                                        android:text="In-Process"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        tools:ignore="HardcodedText,TooDeepLayout" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:background="@drawable/rounded_blue_border"
+                                        android:paddingHorizontal="20dp"
+                                        android:paddingVertical="5dp"
+                                        android:text="6"
+                                        android:textColor="@color/black"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold"
+                                        tools:ignore="HardcodedText" />
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="15dp"
+                                    android:layout_marginVertical="15dp"
+                                    app:cardCornerRadius="20dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingHorizontal="15dp"
+                                        android:paddingVertical="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingTop="15dp"
+                                            android:text="Brainstorming"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingVertical="5dp"
+                                            android:text="Due date: Dec 14, 2014"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="15sp"
+                                            tools:ignore="HardcodedText" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:paddingVertical="10dp">
+
+                                            <TextView
+                                                android:id="@+id/attachment3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:text="8"
+                                                android:textSize="15sp"
+                                                app:drawableLeftCompat="@drawable/attachment_icon"
+                                                tools:ignore="HardcodedText" />
+
+                                            <TextView
+                                                android:id="@+id/chat3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/attachment3"
+                                                android:layout_toLeftOf="@+id/attachment3"
+                                                android:drawableLeft="@drawable/chat_icon"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:paddingHorizontal="10dp"
+                                                android:text="6"
+                                                android:textSize="15sp"
+                                                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                                            <TextView
+                                                android:id="@+id/flag3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/chat3"
+                                                android:layout_toLeftOf="@+id/chat3"
+                                                android:drawableLeft="@drawable/flag_icon"
+                                                android:drawablePadding="10dp"
+                                                android:drawableTint="@color/blue"
+                                                android:gravity="center_vertical"
+                                                tools:ignore="HardcodedText,UnusedAttribute,UseCompatTextViewDrawableXml" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="15dp"
+                                    android:layout_marginVertical="15dp"
+                                    app:cardCornerRadius="20dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingHorizontal="15dp"
+                                        android:paddingVertical="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingTop="15dp"
+                                            android:text="Design Explore"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold"
+                                            tools:ignore="HardcodedText" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/lexend_deca"
+                                            android:paddingVertical="5dp"
+                                            android:text="Due date: Dec 14, 2014"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="15sp"
+                                            tools:ignore="HardcodedText" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:paddingVertical="10dp">
+
+                                            <TextView
+                                                android:id="@+id/attachment4"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:text="8"
+                                                android:textSize="15sp"
+                                                app:drawableLeftCompat="@drawable/attachment_icon"
+                                                tools:ignore="HardcodedText" />
+
+                                            <TextView
+                                                android:id="@+id/chat4"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/attachment4"
+                                                android:layout_toLeftOf="@+id/attachment4"
+                                                android:drawableLeft="@drawable/chat_icon"
+                                                android:drawablePadding="10dp"
+                                                android:gravity="center_vertical"
+                                                android:paddingHorizontal="10dp"
+                                                android:text="6"
+                                                android:textSize="15sp"
+                                                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                                            <TextView
+                                                android:id="@+id/flag4"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toStartOf="@+id/chat4"
+                                                android:layout_toLeftOf="@+id/chat4"
+                                                android:drawableLeft="@drawable/flag_icon"
+                                                android:drawablePadding="10dp"
+                                                android:drawableTint="@color/blue"
+                                                android:gravity="center_vertical"
+                                                tools:ignore="HardcodedText,UnusedAttribute,UseCompatTextViewDrawableXml" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </ScrollView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

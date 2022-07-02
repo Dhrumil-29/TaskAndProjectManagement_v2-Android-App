@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EWalletAppProjectActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@color/light_blue"
+        android:foregroundGravity="bottom"
+        android:src="@drawable/add_icon"
+        app:layout_anchorGravity="bottom"
+        app:maxImageSize="30dp"
+        tools:ignore="ContentDescription,UnusedAttribute" />
+
+    <View
+        android:id="@+id/project_background_pic"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/lightdim_blue" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            app:drawableStartCompat="@drawable/back_icon"
+            app:drawableTint="@color/white"
+            app:tint="@color/white"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/TopMenuBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="0dp"
+            android:paddingVertical="0dp"
+            app:drawableStartCompat="@drawable/menu_icon"
+            app:drawableTint="@color/white"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_toStartOf="@+id/TopMenuBar"
+            android:layout_toLeftOf="@+id/TopMenuBar"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="5dp"
+            android:src="@drawable/search_icon"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/project_background_pic"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:paddingHorizontal="15dp"
+            android:text="E-Wallet App Project"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:text="Add Description"
+            android:textColor="@color/light_black" />
+
+        <TextView
+            android:id="@+id/setDeadlineProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/rounded_blue_border"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Set DeadLine Project"
+            android:textColor="@color/blue" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/project_animation" />
+
+    </LinearLayout>
+
+</RelativeLayout>
